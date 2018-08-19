@@ -3,6 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
+            <h3>Ready to Eat</h3>
             {{#each burgers}} {{#unless devoured}}
             <div>
             {{>burgers/burger-block}}
@@ -12,6 +13,7 @@
     </div>
 
     <div class="col-sm-6">
+        <h3>Eaten</h3>
         {{#each burgers}} {{#if devoured}}
         <div>
             {{burger_name}}
@@ -25,7 +27,7 @@
 <div class="row">
     <div class="col-sm-12">
         <form action="/burgers" method="POST">
-            <input type="text" id="name" name="burger_name" placeholder="Add Burger">
+            <input type="text" id="burger_name" name="burger_name" placeholder="Add Burger">
             <button type="submit" class="addBurger">Add Burger</button>
         </form>
     </div>
